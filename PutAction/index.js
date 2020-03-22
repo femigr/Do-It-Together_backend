@@ -2,7 +2,7 @@ const randomBytes = require('crypto').randomBytes;
 
 const AWS = require('aws-sdk');
 
-const ddb = new AWS.DynamoDB.DocumentClient();
+const ddb = new AWS.DynamoDB.DocumentClient({convertEmptyValues: true});
 
 
 exports.handler = (event, context, callback) => {
